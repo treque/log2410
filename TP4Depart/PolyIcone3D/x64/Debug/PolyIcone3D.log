@@ -1,0 +1,5 @@
+﻿  TP4_Test.cpp
+  Torus.cpp
+  Generating Code...
+d:\documents\a18\log2410 conception logicielle\log2410\tp4depart\tp4code\tp4_test.cpp(179): warning C4715: 'TP4_Test::testDecorator': not all control paths return a value
+  PolyIcone3D.vcxproj -> D:\Documents\A18\LOG2410 Conception logicielle\log2410\TP4Depart\PolyIcone3D\x64\Debug\PolyIcone3D.exe
