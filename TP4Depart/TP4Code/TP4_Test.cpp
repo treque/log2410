@@ -173,7 +173,9 @@ TP4_Test::RESULTAT TP4_Test::testDecorator()
 
 	}
 
+	std::cout << "===== testDecorator TEST 6 SUCCES" << std::endl;
 
+	std::cout << m_cylTransformed << std::endl;
 
-	std::cerr << "===== testDecorator TEST 6 SUCCES" << std::endl;
+	return SUCCES;
 }
