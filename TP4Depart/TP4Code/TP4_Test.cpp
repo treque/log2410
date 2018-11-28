@@ -9,7 +9,7 @@
 #include "Cube.h"
 #include "Cylinder.h"
 #include "Sphere.h"
-#include "../PolyIcone3D/Torus.h"
+#include "Torus.h"
 
 
 TP4_Test::TP4_Test()
@@ -179,3 +179,4 @@ TP4_Test::RESULTAT TP4_Test::testDecorator()
 
 	return SUCCES;
 }
+
