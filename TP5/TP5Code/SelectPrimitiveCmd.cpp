@@ -29,10 +29,11 @@ void SelectPrimitiveCmd::execute()
 {
 	// A COMPLETER:
 	//		- Construire un visiteur de selection
-	VisitorPrimitiveSelector* selectionVisitor = new VisitorPrimitiveSelector(m_type);
+	VisitorPrimitiveSelector selectionVisitor = VisitorPrimitiveSelector(m_type);
 	//		- Appliquer le visiteur a l'objet 3d
-	//m_obj3d.accept(selectionVisitor->getSelectObjects(m_selectObjContainer));
+	m_obj3d.accept(selectionVisitor);
 	//		- Recuperer les objets selectionnes dans le conteneur local de la commande
+	selectionVisitor.getSelectObjects(m_selectObjContainer);
 }
 
 void SelectPrimitiveCmd::getSelectObjects(Obj3DIteratorContainer & objContainer)
@@ -40,8 +41,8 @@ void SelectPrimitiveCmd::getSelectObjects(Obj3DIteratorContainer & objContainer)
 	// A COMPLETER:
 	// Transferer les objets selectionnes du conteneur local a la commande
 	// vers le conteneur fourni en argument
-	for (auto it : m_selectObjContainer) {
-		objContainer.push_back(it);
+	for (auto it = m_selectObjContainer.begin(); it != m_selectObjContainer.end(); it++) {
+		objContainer.push_back(*it);
 	}
 }
  
